@@ -2,7 +2,7 @@
 
 /* Navigation Bar Styles */
 nav {
-    background-color: #333;
+    background-color: #cdcdcd;
     padding: 1rem;
 }
 
@@ -14,7 +14,7 @@ nav ul {
 }
 
 nav a {
-    color: #ffffff;
+    color: #353535;
     text-decoration: none;
     font-weight: bold;
 }
@@ -22,7 +22,9 @@ nav a {
 nav a:hover, nav a:focus {
     text-decoration: underline;
     outline: 2px solid #ffdd57;
+    color: blue;
 }
+
 
 /* Main Jumbotron */
 .jumbotron {
@@ -57,6 +59,12 @@ p {
 a {
     color: #940091;
 }
+section {
+    display: none;
+  }
+section.active {
+    display: block;
+  }
 /* Form and Modals */
 /*
 form {
@@ -87,24 +95,20 @@ input:focus, select:focus, textarea:focus {
     outline: 2px solid black;
     border-color: black;
 }
-input[type="checkbox"].toggle-switch {
-    display: none;
+.toggle-switch {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+#receiveEmailCheckBoxImage:focus {
+    outline: 2px solid black;
+    border-color: black;
+  }
+.topics {
+    border: 2px solid #7d7d7d;
+    padding: 10px;
 }
 
-/* 定义label的样式 */
-.checkbox-label {
-    display: inline-block;
-    width: 24px; /* 根据图片大小调整 */
-    height: 24px;
-    background-image: url('images/off.png'); /* 未选中时的图片 */
-    background-size: contain;
-    cursor: pointer;
-}
-
-/* 当 checkbox 选中时，切换图片 */
-input[type="checkbox"].toggle-switch:checked + .checkbox-label {
-    background-image: url('images/on.png'); /* 选中的图片 */
-}
 /*
 .btn {
     background-color: #c6c6c6;

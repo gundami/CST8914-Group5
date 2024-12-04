@@ -14,9 +14,9 @@
 
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
+    <nav class="navbar navbar-expand-md fixed-top" role="navigation">
       <a class="navbar-brand" href="#home">
-        <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" height="30">
+        <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" height="60">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,10 +27,10 @@
             <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#services">Services</a>
+            <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#schedule">Schedule a Call</a>
+            <a class="nav-link" href="#schedule">Schedule a Call</a>
           </li>
         </ul>
       </div>
@@ -38,11 +38,14 @@
 
     <main>
       <!-- Main landing view -->
-      <div id="home" class="jumbotron mt-5">
-        <div class="container">
-          <h1>Welcome to Empower Ability Labs!</h1>
-          <p>Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to foster understanding and promote inclusive digital experiences for all. We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. And help you find answers on How do people with disabilities use technology and navigate the digital world? What tools do they employ? </p>
-          <button type="button" class="btn btn-outline-dark" aria-controls="meetModal" aria-haspopup="dialog" onclick="openModal('meetModal')">Meet the Empower Community!</button>
+      <section id="home" class="active">
+        <div id="home" class="jumbotron mt-1">
+          <div class="container">
+            <h1>Welcome to Empower Ability Labs!</h1>
+            <p>Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to foster understanding and promote inclusive digital experiences for all. We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. And help you find answers on How do people with disabilities use technology and navigate the digital world? What tools do they employ? </p>
+            <button type="button" class="btn btn-outline-dark" aria-controls="meetModal" aria-haspopup="dialog" onclick="openModal('meetModal')">Meet the Empower Community!</button>
+          </div>
+
         </div>
         <div class="container">
           <div class="row">
@@ -94,22 +97,23 @@
             </div>
           </div>
         </div>
-      </div>
-
-      
+      </section>
 
       <!-- Services Section -->
-      <section id="services" class="container">
-        <div class="container">
-          <h2>Our Services</h2>
-          <div class="row">
-            <div class="col-md-8">
-              <p>Dedicated space or programs designed to cultivate empathy and understanding among individuals towards the challenges faced by people with disabilities in using technology and interacting with various environments.</p>
-            </div>
-            <div class="col-md-4">
-              <img src="images/services.png" alt="Our Service" class="img-fluid mb-3">
+      <section id="services" >
+        <div class="jumbotron mt-1">
+          <div class="container"> 
+            <h2>Our Services</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <p>Dedicated space or programs designed to cultivate empathy and understanding among individuals towards the challenges faced by people with disabilities in using technology and interacting with various environments.</p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/services.png" alt="Our Service" class="img-fluid mb-3">
+              </div>
             </div>
           </div>
+
         </div>
         <div class="container">
           <div>
@@ -128,20 +132,27 @@
       </section>
 
       <!-- Schedule a Call Section -->
-      <section id="schedule" class="container mt-5">
-        <h2>Schedule a Call</h2>
-        <div class="row">
-          <div class="col-md-8">
-            <p>At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences.  Fill out the form below and we’ll get back to you as soon as we can to schedule a call with our sales team! </p>
-          </div>
-          <div class="col-md-4">
-            <img src="images/scheduleacall.png" alt="Schedule a Call" class="img-fluid mb-3">
+      <section id="schedule">
+        <div class="jumbotron mt-1">
+          <div class="container">
+            <h2>Schedule a Call</h2>
+            <div class="row">
+              <div class="col-md-8">
+                <p>At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences.  Fill out the form below and we’ll get back to you as soon as we can to schedule a call with our sales team! </p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/scheduleacall.png" alt="Schedule a Call" class="img-fluid mb-3">
+              </div>
+            </div>
           </div>
         </div>
+       
+      <div class="container">
+        <div id="formMessage"></div>
         <form onsubmit="handleFormSubmit(event)">
           <div class="form-group">
             <label for="businessName">Business Name:</label>
-            <input type="text" class="form-control" id="businessName" required aria-required="true">
+            <input type="text" class="form-control" id="businessName">
           </div>
           <div class="form-group">
             <label for="phoneNumber">Phone Number:</label>
@@ -150,10 +161,10 @@
           </div>
           <div class="form-group">
             <label for="email">Email (required):</label>
-            <input type="email" class="form-control" id="email" required aria-required="true">
+            <input type="email" class="form-control" id="email">
           </div>
-          <div class="form-group">
-            <label>What would you like to talk about:</label>
+          <fieldset class="form-group topics">
+            <legend>What would you like to talk about:</legend>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="awarenessCheckBox">
               <label class="form-check-label" for="awarenessCheckBox">
@@ -172,19 +183,20 @@
                 Usability testing  
               </label>
             </div>
-          </div>
+          </fieldset>
           <div id="extraField" class="form-group" style="display: none;">
             <label for="eventDetails">Please tell us about your event:</label>
             <textarea class="form-control" id="eventDetails" rows="3"></textarea>
           </div>
           <div class="form-check">
-            <label class="form-check-label" for="receiveEmailCheckBox">Receive emails about updates and servicesReceive emails about updates and services</label>
             <input class="form-check-input toggle-switch" type="checkbox" id="receiveEmailCheckBox">
-            <label for="receiveEmailCheckBox" class="checkbox-label"></label>
-            
+            <img src="images/off.png" alt="Toggle" id="receiveEmailCheckBoxImage" style="cursor:pointer; width:36px; height:18px;">
+            <label class="form-check-label" for="receiveEmailCheckBox">Receive emails about updates and servicesReceive emails about updates and services</label>
           </div>
           <button type="submit" class="btn btn-warning">Schedule a Call</button>
         </form>
+      </div>
+
       </section>
     </main>
 
@@ -194,5 +206,6 @@
 
     <!-- JavaScript for interactive components -->
     <script src="EmpowerAbilityLab.js"></script>
+
   </body>
 </html>
