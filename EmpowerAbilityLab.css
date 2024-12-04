@@ -19,7 +19,8 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
     outline: 2px solid #ffdd57;
     color: blue;
@@ -59,12 +60,15 @@ p {
 a {
     color: #940091;
 }
+
 section {
     display: none;
-  }
+}
+
 section.active {
     display: block;
-  }
+}
+
 /* Form and Modals */
 /*
 form {
@@ -91,19 +95,27 @@ input, select, textarea {
 }
     */
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     outline: 2px solid black;
     border-color: black;
 }
+
 .toggle-switch {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
-#receiveEmailCheckBoxImage:focus {
-    outline: 2px solid black;
-    border-color: black;
-  }
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
 .topics {
     border: 2px solid #7d7d7d;
     padding: 10px;
@@ -129,7 +141,7 @@ input:focus, select:focus, textarea:focus {
     border-color: black;
 }
 
-.form-control:focus{
+.form-control:focus {
     outline: 2px solid black;
     border-color: black;
     box-shadow: 0 0 5px rgba(52, 52, 52, 0.5);
@@ -164,7 +176,8 @@ input:focus, select:focus, textarea:focus {
     font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
