@@ -92,20 +92,18 @@ input[type="checkbox"].toggle-switch {
 }
 
 /* 定义label的样式 */
-.custom-checkbox {
-    width: 50px;
-    height: 50px;
-    background-image: url('off.png'); /* 默认未选中的图片 */
-    background-size: cover;
-    cursor: pointer;
+.checkbox-label {
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px; /* 为文字留出间距 */
+    width: 50px; /* 根据图片大小调整 */
+    height: 50px;
+    background-image: url('images/off.png'); /* 未选中时的图片 */
+    background-size: contain;
+    cursor: pointer;
 }
 
 /* 当 checkbox 选中时，切换图片 */
-input[type="checkbox"].toggle-switch:checked + .custom-checkbox {
-    background-image: url('on.png'); /* 选中的图片 */
+input[type="checkbox"].toggle-switch:checked + .checkbox-label {
+    background-image: url('images/on.png'); /* 选中的图片 */
 }
 /*
 .btn {
