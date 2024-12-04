@@ -133,33 +133,30 @@ function handleHashChange() {
 window.addEventListener('hashchange', handleHashChange);
 window.addEventListener('load', handleHashChange);
 
-const customCheckbox = document.getElementById('receiveEmailCheckBox');
-const customCheckboxImage = document.getElementById('receiveEmailCheckBoxImage');
-
-function updateCheckboxImage() {
-    if (customCheckbox.checked) {
-        customCheckboxImage.src = 'images/on.png';
-        customCheckboxImage.alt = 'Toggled on';
-    } else {
-        customCheckboxImage.src = 'images/off.png';
-        customCheckboxImage.alt = 'Toggle off';
+document.addEventListener('DOMContentLoaded', function () {
+    const customCheckbox = document.getElementById('customCheckbox');
+    const customCheckboxImage = document.querySelector('.custom-checkbox-image');
+  
+    function updateCheckboxImage() {
+      const isChecked = customCheckbox.checked;
+      customCheckboxImage.setAttribute('aria-checked', isChecked);
+      customCheckbox.setAttribute('aria-checked', isChecked);
     }
-}
-
-updateCheckboxImage();
-
-customCheckboxImage.addEventListener('click', () => {
-    customCheckbox.checked = !customCheckbox.checked;
-    customCheckbox.dispatchEvent(new Event('change'));
-});
-
-customCheckbox.addEventListener('change', updateCheckboxImage);
-
-customCheckbox.addEventListener('keydown', (event) => {
-    if (event.key === ' ' || event.key === 'Enter') {
+  
+    customCheckboxImage.addEventListener('click', () => {
+      customCheckbox.checked = !customCheckbox.checked;
+      customCheckbox.dispatchEvent(new Event('change'));
+    });
+  
+    customCheckboxImage.addEventListener('keydown', (event) => {
+      if (event.key === ' ' || event.key === 'Enter') {
         event.preventDefault();
         customCheckbox.checked = !customCheckbox.checked;
         customCheckbox.dispatchEvent(new Event('change'));
-    }
-});
-
+      }
+    });
+  
+    customCheckbox.addEventListener('change', updateCheckboxImage);
+  
+    updateCheckboxImage();
+  });

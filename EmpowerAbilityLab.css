@@ -102,10 +102,33 @@ textarea:focus {
     border-color: black;
 }
 
-.toggle-switch {
+.custom-checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox {
     position: absolute;
     opacity: 0;
     pointer-events: none;
+}
+
+.custom-checkbox-image {
+    display: inline-block;
+    width: 36px;
+    height: 18px;
+    background-image: url('images/off.png');
+    background-size: cover;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-checkbox-image[aria-checked="true"] {
+    background-image: url('images/on.png');
+}
+
+.custom-checkbox-image:focus {
+    outline: 2px solid black;
 }
 
 .switch-container {
