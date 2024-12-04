@@ -54,6 +54,9 @@ p {
     color: #333;
 }
 
+a {
+    color: #940091;
+}
 /* Form and Modals */
 /*
 form {
@@ -84,23 +87,25 @@ input:focus, select:focus, textarea:focus {
     outline: 2px solid black;
     border-color: black;
 }
-.customCheckbox input[type="checkbox"] {
+input[type="checkbox"].toggle-switch {
     display: none;
 }
 
 /* 定义label的样式 */
-.checkbox-label {
-    display: inline-block;
-    width: 50px; /* 根据图片大小调整 */
+.custom-checkbox {
+    width: 50px;
     height: 50px;
-    background-image: url('images/off.png'); /* 未选中时的图片 */
-    background-size: contain;
+    background-image: url('off.png'); /* 默认未选中的图片 */
+    background-size: cover;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* 为文字留出间距 */
 }
 
-/* 选中时改变背景图片 */
-input[type="checkbox"]:checked + .checkbox-label {
-    background-image: url('images/on.png'); /* 选中时的图片 */
+/* 当 checkbox 选中时，切换图片 */
+input[type="checkbox"].toggle-switch:checked + .custom-checkbox {
+    background-image: url('on.png'); /* 选中的图片 */
 }
 /*
 .btn {
