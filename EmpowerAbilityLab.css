@@ -55,6 +55,7 @@ p {
 }
 
 /* Form and Modals */
+/*
 form {
     max-width: 600px;
     margin: 2rem auto;
@@ -77,12 +78,31 @@ input, select, textarea {
     border: 1px solid #ced4da;
     border-radius: 4px;
 }
+    */
 
 input:focus, select:focus, textarea:focus {
     outline: 2px solid black;
     border-color: black;
 }
+.customCheckbox input[type="checkbox"] {
+    display: none;
+}
 
+/* 定义label的样式 */
+.checkbox-label {
+    display: inline-block;
+    width: 50px; /* 根据图片大小调整 */
+    height: 50px;
+    background-image: url('images/off.png'); /* 未选中时的图片 */
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* 选中时改变背景图片 */
+input[type="checkbox"]:checked + .checkbox-label {
+    background-image: url('images/on.png'); /* 选中时的图片 */
+}
+/*
 .btn {
     background-color: #c6c6c6;
     color: rgb(0, 0, 0);
@@ -91,7 +111,7 @@ input:focus, select:focus, textarea:focus {
     border-radius: 4px;
     cursor: pointer;
 }
-
+    */
 .btn:hover {
     background-color: #e1e1e1;
     color: rgb(0, 0, 0);

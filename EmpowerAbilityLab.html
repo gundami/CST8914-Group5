@@ -40,32 +40,89 @@
       <!-- Main landing view -->
       <div id="home" class="jumbotron mt-5">
         <div class="container">
-          <h1 class="h2">Welcome to Empower Ability Labs!</h1>
-          <p>We are on a mission to foster understanding and promote inclusive digital experiences for all. Join us in raising accessibility awareness and enhancing user experience through empathy-building workshops and immersive lab days.</p>
+          <h1>Welcome to Empower Ability Labs!</h1>
+          <p>Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to foster understanding and promote inclusive digital experiences for all. We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. And help you find answers on How do people with disabilities use technology and navigate the digital world? What tools do they employ? </p>
+          <button type="button" class="btn btn-outline-dark" aria-controls="meetModal" aria-haspopup="dialog" onclick="openModal('meetModal')">Meet the Empower Community!</button>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Our Approach</h2>
+              <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective. </p>
+              <a href="https://www.google.com/search/howsearchworks/our-approach/" aria-label="Learn more about our approach">Learn More</a>
+            </div>
+            <div class="col-md-4">
+              <h2>Services</h2>
+              <p>Promote accessibility awareness and enhance the user experience.</p>
+              <ul>
+                <li>Empathy lab days and workshops</li>
+                <li> Go beyond WCAG compliance!</li>
+                <li>Inspirational speakers.</li>  
+              </ul>
+              <a href="https://www.elevenways.be/en/services" aria-label="Learn more about our services">Learn More</a>
+            </div>
+            <div class="col-md-4">
+              <h2>Testimonials</h2>
+              <p>nvite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your team’s understanding of inclusion. </p>
+              <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" aria-label="Learn more about our testimonials">Learn More</a>
+            </div>
+          </div>
+        </div>
+      
+        <div id="meetModal" class="modal" role="dialog" aria-labelledby="meetModalTitle" aria-modal="true" tabindex="-1">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="meetModalTitle">Community Steering Committee</h5>
+                <button type="button" class="close" aria-label="Close" onclick="closeModal('meetModal')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including: </p>
+                <ul>
+                  <li>McGill University</li>
+                  <li>Walmart.ca</li>
+                  <li>Apple.ca</li>
+                  <li>Google.ca</li>
+                  <li>Government of Canada</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeModal('meetModal')">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
+      
+
       <!-- Services Section -->
       <section id="services" class="container">
-        <h2>Our Services</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="images/services.png" alt="Empathy Lab Days" class="img-fluid mb-3">
-            <h3>Empathy Lab Days</h3>
-            <p>Interactive workshops to experience the challenges faced by individuals with disabilities.</p>
-            <button type="button" class="btn btn-primary" aria-controls="empathyModal" aria-haspopup="dialog" onclick="openModal('empathyModal')">Learn More</button>
+        <div class="container">
+          <h2>Our Services</h2>
+          <div class="row">
+            <div class="col-md-8">
+              <p>Dedicated space or programs designed to cultivate empathy and understanding among individuals towards the challenges faced by people with disabilities in using technology and interacting with various environments.</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/services.png" alt="Our Service" class="img-fluid mb-3">
+            </div>
           </div>
-          <div class="col-md-4">
-            <img src="images/services.png" alt="Inspirational Speakers" class="img-fluid mb-3">
-            <h3>Inspirational Speakers</h3>
-            <p>Invite a speaker with disabilities to share their journey and foster inclusivity.</p>
-            <button type="button" class="btn btn-primary" aria-controls="speakerModal" aria-haspopup="dialog" onclick="openModal('speakerModal')">Learn More</button>
+        </div>
+        <div class="container">
+          <div>
+            <h3>Empathy Lab days and workshops</h3>
+            <p>The lab days and workshops typically provide hands-on experiences, simulations, and interactions with assistive technologies, tools, and scenarios that replicate the obstacles individuals with disabilities encounter daily. </p>
           </div>
-          <div class="col-md-4">
-            <img src="images/services.png" alt="Usability Testing" class="img-fluid mb-3">
-            <h3>Usability Testing</h3>
-            <p>Involve people with disabilities in testing to improve product accessibility.</p>
-            <button type="button" class="btn btn-primary" aria-controls="testingModal" aria-haspopup="dialog" onclick="openModal('testingModal')">Learn More</button>
+          <div>
+            <h3>Inspirational speakers</h3>
+            <p>Invite a speaker with disabilities to take share their unique journey. This captivating addition to your upcoming event will offer insights that resonate, inspire, educate, and enrich your team collective understanding of inclusion.  </p>
+          </div>
+          <div>
+            <h3>Usability testing</h3>
+            <p>Go beyond WCAG! Involve individuals with disabilities in usability testing to gather valuable insights for refining product strategy and identifying accessibility concerns at an early stage when solutions are more feasible and cost-effective. You have access to a diverse community of people with disabilities, who use various assistive technologies. With technical expertise ranging from novice to expert, our community can support your product lifecycle from user research, to design, to QA. </p>
           </div>
         </div>
       </section>
@@ -73,8 +130,15 @@
       <!-- Schedule a Call Section -->
       <section id="schedule" class="container mt-5">
         <h2>Schedule a Call</h2>
-        <img src="images/scheduleacall.png" alt="Schedule a Call" class="img-fluid mb-3">
-        <form onsubmit="handleFormSubmit(event)">
+        <div class="row">
+          <div class="col-md-8">
+            <p>At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences.  Fill out the form below and we’ll get back to you as soon as we can to schedule a call with our sales team! </p>
+          </div>
+          <div class="col-md-4">
+            <img src="images/scheduleacall.png" alt="Schedule a Call" class="img-fluid mb-3">
+          </div>
+        </div>
+        <form onsubmit="handleFormSubmit(event)" aria-labelledby="Schedule Form">
           <div class="form-group">
             <label for="businessName">Business Name:</label>
             <input type="text" class="form-control" id="businessName" required aria-required="true">
@@ -89,82 +153,39 @@
             <input type="email" class="form-control" id="email" required aria-required="true">
           </div>
           <div class="form-group">
-            <label for="servicesInterest">What would you like to talk about:</label>
-            <select class="form-control" id="servicesInterest" aria-label="Select services interest">
-              <option>Awareness lab days and workshops</option>
-              <option>Invite a speaker with disabilities to your event</option>
-              <option>Usability testing</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="inviteCheckbox" onchange="toggleFormDetails()">
-            <label for="inviteCheckbox">Invite a speaker to your event</label>
+            <label>What would you like to talk about:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="awarenessCheckBox" aria-labelledby="awarenessCheckBoxLable">
+              <label class="form-check-label" for="awarenessCheckBox">
+                Awareness lab days and workshops
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="inviteCheckbox" aria-labelledby="inviteCheckBoxLable">
+              <label class="form-check-label" for="inviteCheckbox">
+                Invite a speaker with disabilities to your event
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="usabilityCheckBox" aria-labelledby="usabilityCheckBoxLabel">
+              <label class="form-check-label" for="usabilityCheckBox">
+                Usability testing  
+              </label>
+            </div>
           </div>
           <div id="extraField" class="form-group" style="display: none;">
             <label for="eventDetails">Please tell us about your event:</label>
             <textarea class="form-control" id="eventDetails" rows="3"></textarea>
           </div>
+          <div class="form-check">
+
+           <input class="form-check-input customCheckbox" type="checkbox" id="receiveEmailCheckBox" aria-labelledby="receiveEmailCheckBoxLabel">
+           <label for="receiveEmailCheckBox" class="checkbox-label"></label>
+           <label class="form-check-label" for="receiveEmailCheckBox">Receive emails about updates and servicesReceive emails about updates and services</label>
+          </div>
           <button type="submit" class="btn btn-success">Schedule a Call</button>
         </form>
       </section>
-
-      <!-- Modals -->
-      <div id="empathyModal" class="modal" role="dialog" aria-labelledby="empathyModalTitle" aria-modal="true" tabindex="-1">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="empathyModalTitle">Empathy Lab Days</h5>
-              <button type="button" class="close" aria-label="Close" onclick="closeModal('empathyModal')">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Empathy Lab Days allow participants to walk in the shoes of people with disabilities and understand their experiences.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" onclick="closeModal('empathyModal')">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="speakerModal" class="modal" role="dialog" aria-labelledby="speakerModalTitle" aria-modal="true" tabindex="-1">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="speakerModalTitle">Inspirational Speakers</h5>
-              <button type="button" class="close" aria-label="Close" onclick="closeModal('speakerModal')">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Invite a speaker with disabilities to share their journey and foster inclusivity.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" onclick="closeModal('speakerModal')">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="testingModal" class="modal" role="dialog" aria-labelledby="testingModalTitle" aria-modal="true" tabindex="-1">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="testingModalTitle">Usability Testing</h5>
-              <button type="button" class="close" aria-label="Close" onclick="closeModal('testingModal')">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Usability Testing involves people with disabilities in testing to improve product accessibility.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" onclick="closeModal('testingModal')">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
 
     <footer class="container mt-5" role="contentinfo">
@@ -173,5 +194,6 @@
 
     <!-- JavaScript for interactive components -->
     <script src="EmpowerAbilityLab.js"></script>
+  
   </body>
 </html>

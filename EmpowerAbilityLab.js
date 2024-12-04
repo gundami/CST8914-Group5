@@ -40,17 +40,6 @@ function closeModal(modalId) {
     }
 }
 
-// 切换额外表单详情的函数
-function toggleFormDetails() {
-    const checkbox = document.getElementById('inviteCheckbox');
-    const extraField = document.getElementById('extraField');
-    if (checkbox.checked) {
-        extraField.style.display = 'block';
-    } else {
-        extraField.style.display = 'none';
-    }
-}
-
 // 点击模态框内容外部时关闭模态框
 window.addEventListener('click', function(event) {
     const modals = document.getElementsByClassName('modal');
@@ -70,5 +59,14 @@ document.addEventListener('keydown', function(event) {
                 closeModal(modals[i].id);
             }
         }
+    }
+});
+
+document.getElementById('inviteCheckbox').addEventListener('change', function() {
+    var additionalOption = document.getElementById('extraField');
+    if (this.checked) {
+      additionalOption.style.display = 'block';
+    } else {
+      additionalOption.style.display = 'none';
     }
 });
