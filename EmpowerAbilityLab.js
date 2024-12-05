@@ -81,6 +81,19 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('keydown', (event) => {
+            if (event.key === ' ') {
+                event.preventDefault();
+                link.click();
+            }
+        });
+    });
+});
+
 document.getElementById('inviteCheckbox').addEventListener('change', function () {
     var additionalOption = document.getElementById('extraField');
     if (this.checked) {
